@@ -35,7 +35,7 @@ def event_test(event, say):
     original_message_ts = event["ts"]
 
     # Use the `app.event` method to send a reply to the message thread
-    say(send, thread_ts=original_message_ts)
+    say(send, thread_ts=original_message_ts, reply_broadcast=True)
 
 def chatgpt_refresh():
     while True:
