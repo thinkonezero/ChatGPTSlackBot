@@ -21,11 +21,12 @@ def event_test(event, say):
     prompt = re.sub('(?:\s)<@[^, ]*|(?:^)<@[^, ]*', '', event['text'])
     try:
         response = chatbot.ask(prompt)
-        user = event['user']
-        user = f"<@{user}> you asked:"
-        asked = ['>',prompt]
-        asked = "".join(asked)
-        send = [user,asked,response]
+        #user = event['user']
+        #user = f"<@{user}> you asked:"
+        #asked = ['>',prompt]
+        #asked = "".join(asked)
+        #send = [user,asked,response]
+        send = [response]
         send = "\n".join(send)
     except Exception as e:
         print(e)
