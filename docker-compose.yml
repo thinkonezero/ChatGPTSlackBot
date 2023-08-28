@@ -34,3 +34,5 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     ports:
       - 4000:4000
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
